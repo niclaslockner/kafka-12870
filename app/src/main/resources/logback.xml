@@ -1,0 +1,14 @@
+<configuration>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%-5level %d{HH:mm:ss.SSS}[%thread] %logger{0} - %.-20000msg %ex%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.apache.kafka.clients.producer.internals.RecordAccumulator" level="TRACE" />
+    <logger name="org.apache.kafka.clients.producer.internals.Sender" level="TRACE" />
+
+    <root level="info">
+        <appender-ref ref="stdout" />
+    </root>
+</configuration>
